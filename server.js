@@ -2,7 +2,7 @@ const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3030;
 
 const db = require("./models");
 
@@ -17,7 +17,10 @@ app.use(express.static("public"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populatedb", { useNewUrlParser: true });
 
-
+// Routes
+// =============================================================
+require("./routes/html-routes.js")(app);
+// require("./routes/author-api-routes.js")(app);
 
 // Start the server
 app.listen(PORT, () => {
