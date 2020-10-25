@@ -11,7 +11,7 @@ It is an application to view create and track daily workouts. It allows the user
 * [Screenshot](#Screenshot)
 * [Questions](#Questions)
 ## Link
-[Click here to view the deployed app](https://).
+[Click here to view the deployed app](https://kev-workout-tracker.herokuapp.com/).
 ## Usage
 The home page dislays the last performed workout. Click on continue Workout to continue with the same workout plan or click on New Workout to add a new workout. Click on dashboard to track your daily progress.
 ## Licence
