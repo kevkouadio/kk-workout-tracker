@@ -13,13 +13,13 @@ module.exports = function(app) {
       res.json(dbWorkouts);
     });
   });
-//update exercise
+//update of workout exercise
   app.put("/api/workouts/:id", function(req, res) {
     db.Workout.findOneAndUpdate({_id:req.params.id}, {$set:  {exercises: req.body}}, { new: true } ).then(function(dbWorkouts) {
       res.json(dbWorkouts);
     });
   });
-//display graph of exercises
+//display stats graph of all performed wourkout exercises
   app.get("/api/workouts/range", function(req, res) {
     db.Workout.find({}).populate("workouts").then(function(dbWorkouts) {
       res.json(dbWorkouts);
